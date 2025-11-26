@@ -21,9 +21,27 @@ const About = () => {
   ];
 
   const doctors = [
-    { img: doctor1, imgMobile: doctor1mobile, name: "Dr. Mahan B", title: "Cosmetic Dentist & Aesthetic Specialist", desc: "BDS | Smile Designing | Full Mouth Rehab" },
-    { img: doctor2, imgMobile: doctor2mobile, name: "Dr. ABC", title: "Dermatologist & Skin Specialist", desc: "MD Dermatology | Anti-Ageing Expert" },
-    { img: doctor3, imgMobile: doctor3mobile, name: "Dr. XYZ", title: "Hair Restoration Specialist", desc: "Trichologist | Hair Transplant Certified" },
+    {
+      img: doctor1,
+      imgMobile: doctor1mobile,
+      name: "Dr. Mahan B",
+      title: "Cosmetic Dentist & Aesthetic Specialist",
+      desc: "BDS | Smile Designing | Full Mouth Rehab",
+    },
+    {
+      img: doctor2,
+      imgMobile: doctor2mobile,
+      name: "Dr. ABC",
+      title: "Dermatologist & Skin Specialist",
+      desc: "MD Dermatology | Anti-Ageing Expert",
+    },
+    {
+      img: doctor3,
+      imgMobile: doctor3mobile,
+      name: "Dr. XYZ",
+      title: "Hair Restoration Specialist",
+      desc: "Trichologist | Hair Transplant Certified",
+    },
   ];
 
   return (
@@ -36,7 +54,8 @@ const About = () => {
           Why Patients Love Us
         </h2>
 
-        <div className="max-w-6xl mx-auto bg-[#fefffe] rounded-3xl shadow-lg flex flex-col md:flex-row overflow-hidden">
+        {/* Desktop version (hidden on mobile) */}
+        <div className="max-w-6xl mx-auto bg-[#fefffe] rounded-3xl shadow-lg flex-col md:flex-row overflow-hidden hidden md:flex">
           <div className="md:w-1/2 w-full p-10 flex flex-col justify-center gap-4">
             {steps.map((step, index) => (
               <div key={index} className="flex items-start gap-3">
@@ -70,8 +89,45 @@ const About = () => {
             </picture>
           </div>
         </div>
+
+        {/* Mobile-only version */}
+        <div className="flex flex-col gap-4 md:hidden bg-[#fefffe] rounded-2xl shadow-md p-4">
+          <div className="flex flex-col gap-2">
+            {steps.map((step, index) => (
+              <div key={index} className="flex items-start gap-2">
+                <span
+                  className="text-[#12ace5] font-bold text-base"
+                  style={{ fontFamily: "Caveat, cursive" }}
+                >
+                  {index + 1}.
+                </span>
+                <p
+                  className="text-gray-800 text-sm"
+                  style={{ fontFamily: "Open Sans, sans-serif" }}
+                >
+                  {step}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="w-full h-48 mt-4">
+            <picture>
+              <source media="(max-width: 768px)" srcSet={whyMobile} />
+              <img
+                src={whyBig}
+                alt="Why Choose Us"
+                loading="lazy"
+                decoding="async"
+                fetchPriority="low"
+                className="w-full h-full object-cover rounded-xl"
+              />
+            </picture>
+          </div>
+        </div>
       </div>
 
+      {/* Meet Our Team */}
       <div className="max-w-7xl mx-auto px-6 mt-24">
         <h2
           className="text-4xl font-bold text-center mb-12 text-[#12ace5]"
