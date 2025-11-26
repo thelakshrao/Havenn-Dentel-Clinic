@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import background2 from "../images/background2.webp";
-import background2mobile from "../images/background2mobile.webp";
+import background2 from "../images/background6.webp";
+import background2mobile from "../images/background6mobile.webp";
 import section1pic1 from "../images/appointment1.webp";
 import section1pic2 from "../images/appointment2.webp";
 import section1pic3 from "../images/appointment3.webp";
@@ -17,7 +17,14 @@ const Appointment = () => {
     section1pic3mobile,
   ];
   const [current, setCurrent] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -26,10 +33,11 @@ const Appointment = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const pics = isMobile ? picturesMobile : picturesDesktop;
+
   return (
-    <div
-      className=" w-full min-h-[700px] relative flex items-center justify-center overflow-hidden py-6"
-    >
+    <div className="w-full min-h-[500px] md:min-h-[700px] relative flex items-center justify-center overflow-hidden py-6">
+      {/* Background */}
       <div className="absolute inset-0 bg-cover bg-center">
         <picture>
           <source media="(max-width: 768px)" srcSet={background2mobile} />
@@ -45,66 +53,74 @@ const Appointment = () => {
 
       <div className="absolute inset-0 bg-[#000000]/30"></div>
 
-      <div className="relative z-10 flex w-11/12 md:w-4/5 bg-transparent rounded-3xl shadow-xl overflow-hidden flex-col md:flex-row">
-        <div className="w-full md:w-2/5 h-64 md:h-auto flex items-center justify-center relative overflow-hidden rounded-t-3xl md:rounded-none md:rounded-l-3xl">
-          {picturesDesktop.map((pic, index) => (
-            <picture
+      {/* Card */}
+      <div
+        className={`relative z-10 flex flex-col ${
+          isMobile ? "w-11/12" : "w-4/5 md:flex-row"
+        } bg-transparent rounded-3xl shadow-xl overflow-hidden`}
+      >
+        {/* Image Slider */}
+        <div
+          className={`${
+            isMobile ? "w-full h-48" : "w-2/5 h-64 md:h-auto"
+          } flex items-center justify-center relative overflow-hidden rounded-t-3xl md:rounded-none md:rounded-l-3xl`}
+        >
+          {pics.map((pic, index) => (
+            <img
               key={index}
-              className={`
-                absolute inset-0 transition-transform duration-900 ease-in-out
-                ${index === current ? "translate-x-0 z-10" : "translate-x-full z-0"}
-              `}
-            >
-              <source
-                media="(max-width: 768px)"
-                srcSet={picturesMobile[index]}
-              />
-              <img
-                src={pic}
-                alt="Appointment"
-                className="w-full h-full object-cover rounded-t-3xl md:rounded-none md:rounded-l-3xl"
-              />
-            </picture>
+              src={pic}
+              alt="Appointment"
+              className={`absolute inset-0 w-full h-full object-cover rounded-t-3xl md:rounded-none md:rounded-l-3xl transition-transform duration-900 ease-in-out ${
+                index === current ? "translate-x-0 z-10" : "translate-x-full z-0"
+              }`}
+            />
           ))}
         </div>
 
-        <div className="w-full md:w-3/5 p-6 md:p-8 bg-[#fefffe]/90 flex flex-col justify-center rounded-b-3xl md:rounded-r-3xl md:rounded-bl-none shadow-xl">
+        {/* Form */}
+        <div
+          className={`${
+            isMobile ? "w-full p-4" : "w-3/5 p-6 md:p-8"
+          } bg-[#fefffe]/90 flex flex-col justify-center rounded-b-3xl md:rounded-r-3xl md:rounded-bl-none shadow-xl`}
+        >
           <h2
-            className="text-xl md:text-2xl font-bold mb-6 text-[#12ace5]"
+            className={`font-bold mb-4 text-[#12ace5] ${
+              isMobile ? "text-lg" : "text-2xl"
+            }`}
             style={{ fontFamily: "Caveat, cursive" }}
           >
             Book an Appointment
           </h2>
 
-          <form className="flex flex-col gap-4">
+          <form className="flex flex-col gap-3">
             <input
               type="text"
               placeholder="Name"
-              className="p-3 rounded-lg border border-[#d7f5fb] focus:outline-none focus:ring-2 focus:ring-[#12ace5]"
+              className="p-2 md:p-3 rounded-lg border border-[#d7f5fb] focus:outline-none focus:ring-2 focus:ring-[#12ace5]"
               style={{ fontFamily: "Open Sans, sans-serif" }}
             />
             <input
               type="email"
               placeholder="Email"
-              className="p-3 rounded-lg border border-[#d7f5fb] focus:outline-none focus:ring-2 focus:ring-[#12ace5]"
+              className="p-2 md:p-3 rounded-lg border border-[#d7f5fb] focus:outline-none focus:ring-2 focus:ring-[#12ace5]"
               style={{ fontFamily: "Open Sans, sans-serif" }}
             />
             <input
               type="tel"
               placeholder="Phone Number"
-              className="p-3 rounded-lg border border-[#d7f5fb] focus:outline-none focus:ring-2 focus:ring-[#12ace5]"
+              className="p-2 md:p-3 rounded-lg border border-[#d7f5fb] focus:outline-none focus:ring-2 focus:ring-[#12ace5]"
               style={{ fontFamily: "Open Sans, sans-serif" }}
             />
             <textarea
               placeholder="Message"
-              rows="4"
-              className="p-3 rounded-lg border border-[#d7f5fb] focus:outline-none focus:ring-2 focus:ring-[#12ace5]"
+              rows={isMobile ? 3 : 4}
+              className="p-2 md:p-3 rounded-lg border border-[#d7f5fb] focus:outline-none focus:ring-2 focus:ring-[#12ace5]"
               style={{ fontFamily: "Open Sans, sans-serif" }}
             ></textarea>
 
             <button
               type="submit"
-              className="bg-[#12ace5] text-white font-semibold py-3 rounded-lg hover:bg-[#d7f5fb] hover:text-black transition-colors"
+              className="bg-[#12ace5] text-white font-semibold py-2 md:py-3 rounded-lg hover:bg-[#d7f5fb] hover:text-black transition-colors"
               style={{ fontFamily: "Open Sans, sans-serif" }}
             >
               Submit
