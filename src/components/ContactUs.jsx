@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Footer from "./Footer.jsx";
+import Navbar from "./Navbar.jsx";
 import ContactDetailsSection from "./ContactDetailsSection.jsx";
 import Background3 from "../images/background3.webp";
 import Background3Mobile from "../images/background3mobile.webp";
@@ -50,6 +51,7 @@ const ContactUs = () => {
 
   return (
     <>
+    <Navbar/>
     <div className="w-full">
       {/* Section 1 */}
       <div
