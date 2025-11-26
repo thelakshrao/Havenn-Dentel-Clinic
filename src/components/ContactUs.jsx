@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Footer from "./Footer.jsx";
+import ContactDetailsSection from "./ContactDetailsSection.jsx";
 import Background3 from "../images/background3.webp";
 import Background3Mobile from "../images/background3mobile.webp";
 import cardImg1 from "../images/appointment2.webp";
@@ -47,15 +49,11 @@ const ContactUs = () => {
   }, [isMobile, cards.length]);
 
   return (
+    <>
     <div className="w-full">
-      {/* App Bar */}
-      <div className="w-full bg-blue-900 text-white p-4 text-center font-bold text-xl shadow-lg">
-        Contact Us
-      </div>
-
       {/* Section 1 */}
       <div
-        className={`w-full ${isMobile ? "h-96" : "h-[500px]"} flex flex-col items-center justify-center relative`}
+        className={`w-full ${isMobile ? "h-110" : "h-[550px]"} flex flex-col items-center justify-center relative`}
         style={{
           backgroundImage: `url(${backgroundTop})`,
           backgroundSize: "cover",
@@ -64,7 +62,7 @@ const ContactUs = () => {
       >
         {/* Desktop: 3 static cards */}
         {!isMobile && (
-          <div className="flex flex-row gap-10 items-center justify-center p-4">
+          <div className="flex flex-row gap-10 items-center justify-center p-4 mt-18">
             {cards.map((card, index) => (
               <div
                 key={index}
@@ -86,7 +84,7 @@ const ContactUs = () => {
 
         {/* Mobile: single card slider */}
         {isMobile && (
-          <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+          <div className="relative top-8 w-full h-full flex items-center justify-center overflow-hidden">
             {cards.map((card, index) => (
               <div
                 key={index}
@@ -109,6 +107,9 @@ const ContactUs = () => {
         )}
       </div>
     </div>
+    <ContactDetailsSection/>
+    <Footer/>
+    </>
   );
 };
 
