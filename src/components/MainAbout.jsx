@@ -63,7 +63,6 @@ const MainAbout = () => {
   const [heroInView, setHeroInView] = useState(false);
   const [teamInView, setTeamInView] = useState(false);
 
-  // Detect mobile screen
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     handleResize();
@@ -71,7 +70,6 @@ const MainAbout = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Intersection Observer for hero and team
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {

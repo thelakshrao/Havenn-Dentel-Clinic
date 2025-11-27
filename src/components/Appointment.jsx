@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import background2 from "../images/background6.webp";
-import background2mobile from "../images/background6mobile.webp";
+import background2 from "../images/background2.webp";
+import background2mobile from "../images/background2mobile.webp";
 import section1pic1 from "../images/appointment1.webp";
 import section1pic2 from "../images/appointment2.webp";
 import section1pic3 from "../images/appointment3.webp";
