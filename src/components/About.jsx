@@ -7,6 +7,7 @@ import doctor2mobile from "../images/doctor1mobile.webp";
 import doctor3mobile from "../images/doctor1mobile.webp";
 import whyBig from "../images/why.webp";
 import whyMobile from "../images/whymobile.webp";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const steps = [
@@ -176,11 +177,8 @@ const About = () => {
                   {doc.desc}
                 </p>
 
-                <button
-                  className="mt-5 px-6 py-2 bg-[#12ace5] hover:bg-[#d7f5fb] hover:text-black text-white rounded-full shadow-md transition"
-                  style={{ fontFamily: "Open Sans, sans-serif" }}
-                >
-                  Book Appointment
+                <button className="mt-5 md:mt-16 px-8 py-3 bg-[#12ace5] text-white cursor-pointer font-semibold rounded-full shadow-lg hover:bg-[#d7f5fb] hover:text-black transition z-50">
+                  <Link to="/bookappointment">Book Appointment</Link>
                 </button>
               </div>
             </div>

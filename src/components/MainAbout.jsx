@@ -8,6 +8,7 @@ import section2card4 from "../images/section1pic3.webp";
 import Doctors from "../images/doctor1.webp";
 import Review from "./Review.jsx";
 import Footer from "./Footer.jsx";
+import { Link } from "react-router-dom";
 
 const cards = [
   {
@@ -191,7 +192,9 @@ const MainAbout = () => {
 
               <div
                 className={`relative z-10 text-center px-4 transition-opacity duration-500 ${
-                  isMobile || activeIndex === index ? "opacity-100" : "opacity-0"
+                  isMobile || activeIndex === index
+                    ? "opacity-100"
+                    : "opacity-0"
                 }`}
               >
                 <h3 className="text-xl md:text-3xl font-bold mb-2">
@@ -259,9 +262,9 @@ const MainAbout = () => {
           ))}
         </div>
 
-        <div className="w-full flex justify-center mt-12">
-          <button className="px-8 py-3 text-lg font-semibold rounded-full text-white bg-[#12ace5] hover:bg-[#0d8bbd] transition-all duration-300 shadow-md hover:shadow-xl">
-            Book Appointment
+        <div className="w-full flex justify-center">
+          <button className="px-8 py-3 bg-[#12ace5] text-white cursor-pointer font-semibold rounded-full shadow-lg hover:bg-[#d7f5fb] hover:text-black transition z-50">
+            <Link to="/bookappointment">Book Appointment</Link>
           </button>
         </div>
       </section>

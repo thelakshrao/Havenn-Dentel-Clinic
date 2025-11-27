@@ -1,11 +1,11 @@
 import React from "react";
-import logo from "../images/logo.png"; 
+import { Link } from "react-router-dom";
+import logo from "../images/logo.png";
 
 const Footer = () => {
   return (
     <footer className="bg-[#0a749b] text-white pt-12 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between gap-8">
-
         {/* Logo & Tagline */}
         <div className="flex flex-col gap-4 md:w-1/3">
           <div className="flex items-center gap-1">
@@ -19,7 +19,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Quick Links */}
         <div className="flex flex-col gap-4 md:w-1/5">
           <h2
             style={{ fontFamily: "Caveat, cursive" }}
@@ -31,18 +30,30 @@ const Footer = () => {
             style={{ fontFamily: "Open Sans, sans-serif" }}
             className="flex flex-col gap-2 text-gray-300"
           >
-            <li className="hover:text-[#12ace5] cursor-pointer">Home</li>
-            <li className="hover:text-[#12ace5] cursor-pointer">About</li>
-            <li className="hover:text-[#12ace5] cursor-pointer">Treatment</li>
-            <li className="hover:text-[#12ace5] cursor-pointer">Blog</li>
-            <li className="hover:text-[#12ace5] cursor-pointer">Contact Us</li>
+            <li>
+              <Link to="/" className="hover:text-[#12ace5] cursor-pointer">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="hover:text-[#12ace5] cursor-pointer">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contactus"
+                className="hover:text-[#12ace5] cursor-pointer"
+              >
+                Contact Us
+              </Link>
+            </li>
           </ul>
         </div>
-
         {/* Terms */}
         <div className="flex flex-col gap-4 md:w-1/5">
           <h2
-            style={{ fontFamily: "Caveat, curs-serif" }}
+            style={{ fontFamily: "Caveat, cursive" }}
             className="text-lg font-semibold text-[#12ace5]"
           >
             Terms
@@ -51,12 +62,17 @@ const Footer = () => {
             style={{ fontFamily: "Open Sans, sans-serif" }}
             className="flex flex-col gap-2 text-gray-300"
           >
-            <li className="hover:text-[#12ace5] cursor-pointer">Privacy Policy</li>
-            <li className="hover:text-[#12ace5] cursor-pointer">Terms and Conditions</li>
-            <li className="hover:text-[#12ace5] cursor-pointer">Sitemap</li>
+            <li className="hover:text-[#12ace5] cursor-pointer">
+              <Link to="/privacypolicy">Privacy Policy</Link>
+            </li>
+            <li className="hover:text-[#12ace5] cursor-pointer">
+              <Link to="/termsandconditions">Terms and Conditions</Link>
+            </li>
+            <li className="hover:text-[#12ace5] cursor-pointer">
+              <Link to="/">Sitemap</Link>
+            </li>
           </ul>
         </div>
-
         {/* Contact Info */}
         <div className="flex flex-col gap-4 md:w-1/4">
           <h2

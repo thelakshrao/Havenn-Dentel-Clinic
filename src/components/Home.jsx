@@ -13,6 +13,7 @@ import section1pic3 from "../images/section1pic3.webp";
 import section1pic1mobile from "../images/section1pic1mobile.webp";
 import section1pic2mobile from "../images/section1pic2mobile.webp";
 import section1pic3mobile from "../images/section1pic3mobile.webp";
+import { Link } from "react-router-dom";
 
 const Services = React.lazy(() => import("./Services"));
 const Treatments = React.lazy(() => import("./Treatments"));
@@ -110,7 +111,11 @@ enhancements to help you feel your absolute best every day.`,
         <div
           className={`
             absolute z-40 transition-all duration-1000
-            ${animateText ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+            ${
+              animateText
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
+            }
             left-1/2 top-[85px] -translate-x-1/2 text-center w-[90%]
             md:left-40 md:top-65 md:text-left md:translate-x-0
           `}
@@ -119,7 +124,11 @@ enhancements to help you feel your absolute best every day.`,
           <div
             className={`
               transition-all duration-700
-              ${textAnimate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}
+              ${
+                textAnimate
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+              }
             `}
           >
             {textSlides[textIndex].type === "heading" ? (
@@ -167,8 +176,8 @@ enhancements to help you feel your absolute best every day.`,
             )}
           </div>
 
-          <button className="mt-6 px-8 py-3 bg-[#12ace5] text-white cursor-pointer font-semibold rounded-full shadow-lg hover:bg-[#d7f5fb] hover:text-black transition">
-            Book Appointment
+          <button className="mt-10 md:mt-16 px-8 py-3 bg-[#12ace5] text-white cursor-pointer font-semibold rounded-full shadow-lg hover:bg-[#d7f5fb] hover:text-black transition z-50">
+            <Link to="/bookappointment">Book Appointment</Link>
           </button>
         </div>
 
@@ -186,7 +195,10 @@ enhancements to help you feel your absolute best every day.`,
               }`}
             >
               <picture>
-                <source media="(max-width: 768px)" srcSet={picturesMobile[idx]} />
+                <source
+                  media="(max-width: 768px)"
+                  srcSet={picturesMobile[idx]}
+                />
                 <img
                   src={picturesDesktop[idx]}
                   alt={`Section Image ${i}`}

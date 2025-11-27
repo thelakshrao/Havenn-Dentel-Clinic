@@ -1,4 +1,6 @@
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
+
 import treatment1 from "../images/treatment1.webp";
 import treatment2 from "../images/treatment2.webp";
 import treatment3 from "../images/treatment3.webp";
@@ -63,8 +65,9 @@ const Treatments = () => {
 
         <div ref={sliderRef} className="flex gap-6 overflow-x-scroll scroll-smooth no-scrollbar py-4">
           {treatments.map((t, i) => (
-            <div
+            <Link
               key={i}
+              to={`/treatment/${t.name.replace(/\s+/g, "-")}`}
               className="min-w-[180px] md:min-w-[220px] bg-[#fefffe] rounded-xl shadow-md cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl group"
             >
               <img
@@ -72,7 +75,7 @@ const Treatments = () => {
                 alt={t.name}
                 loading="lazy"
                 decoding="async"
-                fetchPriority="low"  // ✅ Fixed camelCase
+                fetchPriority="low"
                 className="w-full h-36 object-cover rounded-t-xl"
               />
               <div className="p-3">
@@ -83,7 +86,7 @@ const Treatments = () => {
                   {t.desc}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
