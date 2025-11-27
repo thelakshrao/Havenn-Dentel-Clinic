@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import Background from "../images/background6.webp";
-import BackgroundMobile from "../images/background6mobile.webp";
+import Background from "../images/background5.webp";
+import BackgroundMobile from "../images/background5mobile.webp";
 import section2card1 from "../images/appointment2.webp";
 import section2card2 from "../images/section1pic1.webp";
 import section2card3 from "../images/section1pic2.webp";
 import section2card4 from "../images/section1pic3.webp";
-import Doctors from "../images/doctor1.webp"; // Manvi's image
-import Profile from "../images/profile.png";   // Other doctors' image
+import Doctors from "../images/doctor1.webp"; 
+import Profile from "../images/profile.png"; 
 import Review from "./Review.jsx";
 import Footer from "./Footer.jsx";
 import { Link } from "react-router-dom";
