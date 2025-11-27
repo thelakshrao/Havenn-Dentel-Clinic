@@ -211,7 +211,7 @@ enhancements to help you feel your absolute best every day.`,
         </div>
 
         {/* MOBILE IMAGES */}
-        <div className="md:hidden flex justify-center gap-3 mt-105 mb-10 z-30 relative">
+        <div className="md:hidden flex justify-center gap-3 mt-108 mb-10 z-30 relative">
           {picturesDesktop.map((pic, idx) => (
             <picture key={idx}>
               <source media="(max-width: 768px)" srcSet={picturesMobile[idx]} />

@@ -135,7 +135,6 @@ const Navbar = () => {
           <Link to="/about" onClick={() => setIsOpen(false)}>
             About Us
           </Link>
-
           {/* Mobile Treatments */}
           <button
             onClick={() => setMobileTreatOpen(!mobileTreatOpen)}
@@ -143,9 +142,8 @@ const Navbar = () => {
           >
             Treatments {mobileTreatOpen ? "▲" : "▼"}
           </button>
-
           {mobileTreatOpen && (
-            <div className="w-full py-4 bg-white text-black rounded-xl shadow-lg">
+            <div className="w-full max-h-80 overflow-y-auto py-4 bg-white text-black rounded-xl shadow-lg">
               <div className="flex flex-col gap-2 px-4">
                 {treatments.map((t, i) => (
                   <Link
@@ -165,7 +163,6 @@ const Navbar = () => {
           <Link to="/contactus" onClick={() => setIsOpen(false)}>
             Contact Us
           </Link>
-
           <Link
             to="/bookappointment"
             onClick={() => setIsOpen(false)}
