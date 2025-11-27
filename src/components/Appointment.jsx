@@ -1,24 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import background2 from "../images/background6.webp";
 import background2mobile from "../images/background6mobile.webp";
 import section1pic1 from "../images/appointment1.webp";
 import section1pic2 from "../images/appointment2.webp";
 import section1pic3 from "../images/appointment3.webp";
-
 import section1pic1mobile from "../images/appointment1mobile.webp";
 import section1pic2mobile from "../images/appointment2mobile.webp";
 import section1pic3mobile from "../images/appointment3mobile.webp";
 
 const Appointment = () => {
   const picturesDesktop = [section1pic1, section1pic2, section1pic3];
-  const picturesMobile = [
-    section1pic1mobile,
-    section1pic2mobile,
-    section1pic3mobile,
-  ];
+  const picturesMobile = [section1pic1mobile, section1pic2mobile, section1pic3mobile];
   const [current, setCurrent] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const form = useRef();
+  const [status, setStatus] = useState("");
 
+  // Detect mobile
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener("resize", handleResize);
@@ -26,6 +25,7 @@ const Appointment = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Slider
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % picturesDesktop.length);
@@ -34,6 +34,31 @@ const Appointment = () => {
   }, []);
 
   const pics = isMobile ? picturesMobile : picturesDesktop;
+
+  // EmailJS function (updated)
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    emailjs
+      .sendForm(
+        "service_ufyd7im",   
+        "template_ne9wa4p",  
+        form.current,
+        "jJyjQfeftSCMObGKr"  
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setStatus("✅ Appointment request sent successfully!");
+          form.current.reset();
+        },
+        (error) => {
+          console.log(error.text);
+          setStatus("❌ Failed to send. Please try again later.");
+        }
+      );
+  };
 
   return (
     <div className="w-full min-h-[500px] md:min-h-[700px] relative flex items-center justify-center overflow-hidden py-6">
@@ -50,7 +75,6 @@ const Appointment = () => {
           />
         </picture>
       </div>
-
       <div className="absolute inset-0 bg-[#000000]/30"></div>
 
       {/* Card */}
@@ -92,40 +116,45 @@ const Appointment = () => {
             Book an Appointment
           </h2>
 
-          <form className="flex flex-col gap-3">
+          <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-3">
             <input
               type="text"
+              name="from_name"
               placeholder="Name"
               className="p-2 md:p-3 rounded-lg border border-[#d7f5fb] focus:outline-none focus:ring-2 focus:ring-[#12ace5]"
-              style={{ fontFamily: "Open Sans, sans-serif" }}
+              required
             />
             <input
               type="email"
+              name="reply_to"
               placeholder="Email"
               className="p-2 md:p-3 rounded-lg border border-[#d7f5fb] focus:outline-none focus:ring-2 focus:ring-[#12ace5]"
-              style={{ fontFamily: "Open Sans, sans-serif" }}
+              required
             />
             <input
               type="tel"
+              name="phone"
               placeholder="Phone Number"
               className="p-2 md:p-3 rounded-lg border border-[#d7f5fb] focus:outline-none focus:ring-2 focus:ring-[#12ace5]"
-              style={{ fontFamily: "Open Sans, sans-serif" }}
+              required
             />
             <textarea
+              name="message"
               placeholder="Message"
               rows={isMobile ? 3 : 4}
               className="p-2 md:p-3 rounded-lg border border-[#d7f5fb] focus:outline-none focus:ring-2 focus:ring-[#12ace5]"
-              style={{ fontFamily: "Open Sans, sans-serif" }}
+              required
             ></textarea>
 
             <button
               type="submit"
-              className="bg-[#12ace5] text-white font-semibold py-2 md:py-3 rounded-lg hover:bg-[#d7f5fb] hover:text-black transition-colors"
-              style={{ fontFamily: "Open Sans, sans-serif" }}
+              className="bg-[#12ace5] text-white font-semibold py-2 md:py-3 rounded-lg hover:bg-[#0e8dbf] transition-colors"
             >
               Submit
             </button>
           </form>
+
+          {status && <p className="mt-2 text-center text-sm">{status}</p>}
         </div>
       </div>
     </div>

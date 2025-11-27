@@ -68,9 +68,6 @@ const Footer = () => {
             <li className="hover:text-[#12ace5] cursor-pointer">
               <Link to="/termsandconditions">Terms and Conditions</Link>
             </li>
-            <li className="hover:text-[#12ace5] cursor-pointer">
-              <Link to="/">Sitemap</Link>
-            </li>
           </ul>
         </div>
         {/* Contact Info */}
@@ -85,10 +82,9 @@ const Footer = () => {
             style={{ fontFamily: "Open Sans, sans-serif" }}
             className="flex flex-col gap-2 text-gray-300"
           >
-            <li>Phone: +91 1234567890</li>
-            <li>Telephone: +91 9876543210</li>
-            <li>Email: info@havenn.com</li>
-            <li>Address: 123 Main Street, City, Country</li>
+            <li>Phone: +91 9315220865</li>
+            <li>Email: Havennsmilestudio@gmail.com</li>
+            <li>Address: E-5/1basement  Malviya Nagar , New Delhi-110017</li>
           </ul>
         </div>
       </div>

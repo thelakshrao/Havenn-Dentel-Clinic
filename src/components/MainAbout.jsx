@@ -5,7 +5,8 @@ import section2card1 from "../images/appointment2.webp";
 import section2card2 from "../images/section1pic1.webp";
 import section2card3 from "../images/section1pic2.webp";
 import section2card4 from "../images/section1pic3.webp";
-import Doctors from "../images/doctor1.webp";
+import Doctors from "../images/doctor1.webp"; // Manvi's image
+import Profile from "../images/profile.png";   // Other doctors' image
 import Review from "./Review.jsx";
 import Footer from "./Footer.jsx";
 import { Link } from "react-router-dom";
@@ -36,18 +37,21 @@ const cards = [
 const doctors = [
   {
     name: "Dr. Manvi Dixit",
-    degree: "BDS, MDS",
-    desc: "Expert dentist with 10+ years of experience.",
+    degree: "BDS | FCE | FCAM",
+    img: Doctors,
+    desc: "She is a highly experienced Dental Surgeon, Root Canal Specialist, and Certified Implantologist trained in Barcelona, Spain. With additional expertise as a Medical Cosmetologist, she combines advanced clinical skills with aesthetic precision to deliver comprehensive, patient-focused dental and cosmetic care.",
   },
   {
-    name: "Dr. Jane Smith",
-    degree: "MBBS, Dermatologist",
-    desc: "Specialist in skin and hair treatments.",
+    name: "Dr. Karan Tyagi",
+    degree: "BDS | MDS",
+    img: Profile,
+    desc: "He is a specialist in pediatric treatments, providing gentle, child-friendly dental care tailored to young patients. With expertise in children’s unique dental needs, he ensures a comfortable, safe, and positive experience.",
   },
   {
-    name: "Dr. Mike Brown",
-    degree: "MD, Laser & Anti-Ageing",
-    desc: "Experienced in advanced laser treatments.",
+    name: "Dr. Subhanshi Mahajan",
+    degree: "BDS",
+    img: Profile,
+    desc: "She is a skilled Dental Surgeon with expertise in modern dental and aesthetic treatments. Known for her precision and patient-centric approach, she ensures safe, comfortable, and personalized care for every patient.",
   },
 ];
 
@@ -227,7 +231,7 @@ const MainAbout = () => {
               {/* Desktop Card */}
               <div className="relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer hidden md:block">
                 <img
-                  src={Doctors}
+                  src={doc.img}
                   alt={doc.name}
                   className="w-full h-96 object-cover"
                 />
@@ -237,7 +241,7 @@ const MainAbout = () => {
                   </h3>
                 </div>
 
-                <div className="absolute inset-0 bg-[#12ace5]/20 backdrop-blur-md flex flex-col justify-center items-center text-center text-white p-6 transform translate-y-full group-hover:translate-y-0 transition-all duration-500">
+                <div className="absolute inset-0 bg-[#12ace5]/60 backdrop-blur-md flex flex-col justify-center items-center text-center text-white p-6 transform translate-y-full group-hover:translate-y-0 transition-all duration-500">
                   <h4 className="text-lg font-semibold mb-2">{doc.degree}</h4>
                   <p className="text-sm">{doc.desc}</p>
                 </div>
@@ -246,12 +250,12 @@ const MainAbout = () => {
               {/* Mobile Card */}
               <div className="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer md:hidden">
                 <img
-                  src={Doctors}
+                  src={doc.img}
                   alt={doc.name}
                   className="w-full h-90 object-cover"
                 />
                 <div className="absolute bottom-2 left-0 w-full text-center z-10">
-                  <h3 className="text-sm font-semibold text black drop-shadow-lg">
+                  <h3 className="text-sm font-semibold text-black drop-shadow-lg">
                     {doc.name}
                   </h3>
                   <p className="text-xs text-[#12ace5] mt-1">{doc.degree}</p>

@@ -11,15 +11,15 @@ const ContactDetailsSection = () => {
           <h3 className="text-2xl font-bold mb-4">Contact Info</h3>
           <div className="flex flex-col gap-3 text-white">
             <div className="flex items-center gap-3">
-              <FaPhone /> <span>+91 9876543210</span>
+              <FaPhone /> <span>+91 9315220865</span>
             </div>
             <div className="flex items-center gap-3">
-              <FaEnvelope /> <span>contact@clinic.com</span>
+              <FaEnvelope /> <span>Havennsmilestudio@gmail.com</span>
             </div>
             <div className="flex items-center gap-3">
-              <FaWhatsapp /> <span>+91 9876543210</span>
+              <FaWhatsapp /> <span>+91 9315220865</span>
             </div>
-            <div className="flex items-center gap-3">
+            {/* <div className="flex items-center gap-3">
               <FaInstagram /> <span>@clinic_insta</span>
             </div>
             <div className="flex items-center gap-3">
@@ -27,7 +27,7 @@ const ContactDetailsSection = () => {
             </div>
             <div className="flex items-center gap-3">
               <FaLinkedin /> <span>@clinic_linkedin</span>
-            </div>
+            </div> */}
           </div>
         </div>
 

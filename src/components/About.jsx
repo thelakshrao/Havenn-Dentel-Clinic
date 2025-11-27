@@ -1,10 +1,10 @@
 import React from "react";
 import doctor1 from "../images/doctor1.webp";
-import doctor2 from "../images/doctor1.webp";
-import doctor3 from "../images/doctor1.webp";
+import doctor2 from "../images/profile.png";
+import doctor3 from "../images/profile.png";
 import doctor1mobile from "../images/doctor1mobile.webp";
-import doctor2mobile from "../images/doctor1mobile.webp";
-import doctor3mobile from "../images/doctor1mobile.webp";
+import doctor2mobile from "../images/profile.png";
+import doctor3mobile from "../images/profile.png";
 import whyBig from "../images/why.webp";
 import whyMobile from "../images/whymobile.webp";
 import { Link } from "react-router-dom";
@@ -25,23 +25,23 @@ const About = () => {
     {
       img: doctor1,
       imgMobile: doctor1mobile,
-      name: "Dr. Mahan B",
-      title: "Cosmetic Dentist & Aesthetic Specialist",
-      desc: "BDS | Smile Designing | Full Mouth Rehab",
+      name: "Dr. Manvi Dixit",
+      title: "Certified Implantologist Barcelona, Spain Medical Cosmetologist",
+      desc: "BDS | FCE | FCAM",
     },
     {
       img: doctor2,
       imgMobile: doctor2mobile,
-      name: "Dr. ABC",
-      title: "Dermatologist & Skin Specialist",
-      desc: "MD Dermatology | Anti-Ageing Expert",
+      name: "Dr. Karan Tyagi",
+      title: "Pediatric Dentist",
+      desc: "BDS | MDS",
     },
     {
       img: doctor3,
       imgMobile: doctor3mobile,
-      name: "Dr. XYZ",
-      title: "Hair Restoration Specialist",
-      desc: "Trichologist | Hair Transplant Certified",
+      name: "Dr. Subhanshi Mahajan",
+      title: "Dental Surgeon",
+      desc: "BDS",
     },
   ];
 
