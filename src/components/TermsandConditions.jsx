@@ -47,7 +47,7 @@ const TermsAndConditions = () => {
             <li>
               <strong>Website:</strong> refers to Havenn Clinic, accessible from{" "}
               <a
-                href="https://havennclinic.com/"
+                href="https://havenn-dentel-clinic.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-500 hover:underline"
@@ -95,7 +95,7 @@ const TermsAndConditions = () => {
             If you have any questions about these Terms and Conditions, you can contact us:
           </p>
           <ul className="list-disc list-inside text-gray-800 mb-4">
-            <li>By email: havennclinic2024@gmail.com</li>
+            <li>By email: Havennsmilestudio@gmail.com</li>
             <li>By visiting this page on our website: 
               <a
                 href="https://havenn-dentel-clinic.vercel.app/contactus"
@@ -106,7 +106,7 @@ const TermsAndConditions = () => {
                 Contact Us
               </a>
             </li>
-            <li>By phone number: +91 9958617809</li>
+            <li>By phone number: +91 9315220865</li>
           </ul>
         </div>
       </div>

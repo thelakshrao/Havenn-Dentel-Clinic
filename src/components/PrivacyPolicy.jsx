@@ -98,9 +98,9 @@ const PrivacyPolicy = () => {
           <h3 className="text-lg font-semibold mt-4 mb-2">Contact Us</h3>
           <p className="text-gray-800 mb-4">If you have any questions about this Privacy Policy, you can contact us:</p>
           <ul className="list-disc list-inside text-gray-800 mb-4">
-            <li>By email: havennclinic@example.com</li>
+            <li>By email: Havennsmilestudio@gmail.com</li>
             <li>By visiting this page on our website: <a href="https://havenn-dentel-clinic.vercel.app/contactus" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Contact Us</a></li>
-            <li>By phone number: +91 9958617809</li>
+            <li>By phone number: +91 9315220865</li>
           </ul>
         </div>
       </div>
