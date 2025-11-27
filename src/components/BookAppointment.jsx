@@ -129,7 +129,7 @@ const BookAppointment = () => {
             </p>
             <div className="mt-3">
               <a href="tel:+919876543210" className={`inline-block bg-[#12ace5] text-white font-semibold rounded-xl shadow-lg ${isMobile ? "text-xs px-3 py-1.5 w-full" : "text-lg px-6 py-3"} text-center`}>
-                📞 Call: 98765 43210
+                📞 Call: +91 93152 20865
               </a>
             </div>
           </motion.div>
