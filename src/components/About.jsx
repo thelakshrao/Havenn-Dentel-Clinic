@@ -2,7 +2,7 @@ import React from "react";
 import doctor1 from "../images/doctor1.webp";
 import doctor2 from "../images/doctor2.webp";
 import doctor3 from "../images/profile.png";
-import doctor1mobile from "../images/doctor1mobile.webp";
+import doctor1mobile from "../images/doctor1.webp";
 import doctor2mobile from "../images/doctor2.webp";
 import doctor3mobile from "../images/profile.png";
 import whyBig from "../images/why.webp";
