@@ -246,25 +246,31 @@ const MainAbout = () => {
               </div>
 
               {/* Mobile Card */}
-              <div className="relative overflow-hidden rounded-2xl shadow-lg cursor-pointer md:hidden">
-                <img
-                  src={doc.img}
-                  alt={doc.name}
-                  className="w-full h-90 object-cover"
-                />
-                <div className="absolute bottom-2 left-0 w-full text-center z-10">
-                  <h3 className="text-sm font-semibold text-black drop-shadow-lg">
+              <div className="flex flex-col md:hidden overflow-hidden rounded-2xl shadow-lg">
+                {/* Image 80% */}
+                <div className="h-4/5">
+                  <img
+                    src={doc.img}
+                    alt={doc.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                {/* Description 20% */}
+                <div className="h-1/5 bg-white p-2 flex flex-col justify-center text-center">
+                  <h3 className="text-sm font-semibold text-black">
                     {doc.name}
                   </h3>
-                  <p className="text-xs text-[#12ace5] mt-1">{doc.degree}</p>
-                  <p className="text-[10px] text-[#12ace5]">{doc.desc}</p>
+                  <p className="text-[10px] text-[#12ace5]">{doc.degree}</p>
+                  <p className="text-[10px] text-gray-700 mt-1">
+                    {doc.desc}
+                  </p>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="w-full flex justify-center">
+        <div className="w-full flex justify-center mt-8">
           <button className="px-8 py-3 bg-[#12ace5] text-white cursor-pointer font-semibold rounded-full shadow-lg hover:bg-[#d7f5fb] hover:text-black transition z-50">
             <Link to="/bookappointment">Book Appointment</Link>
           </button>
