@@ -5,8 +5,9 @@ import section2card1 from "../images/appointment2.webp";
 import section2card2 from "../images/section1pic1.webp";
 import section2card3 from "../images/section1pic2.webp";
 import section2card4 from "../images/section1pic3.webp";
-import Doctors from "../images/doctor1.webp"; 
-import Profile from "../images/profile.png"; 
+import Doctors from "../images/doctor1.webp";
+import Profile from "../images/profile.png";
+import Doctors2 from "../images/doctor2.webp";
 import Review from "./Review.jsx";
 import Footer from "./Footer.jsx";
 import { Link } from "react-router-dom";
@@ -44,7 +45,7 @@ const doctors = [
   {
     name: "Dr. Karan Tyagi",
     degree: "BDS | MDS",
-    img: Profile,
+    img: Doctors2,
     desc: "He is a specialist in pediatric treatments, providing gentle, child-friendly dental care tailored to young patients. With expertise in children’s unique dental needs, he ensures a comfortable, safe, and positive experience.",
   },
   {
@@ -247,23 +248,17 @@ const MainAbout = () => {
 
               {/* Mobile Card */}
               <div className="flex flex-col md:hidden overflow-hidden rounded-2xl shadow-lg">
-                {/* Image 80% */}
-                <div className="h-4/5">
-                  <img
-                    src={doc.img}
-                    alt={doc.name}
-                    className="w-full h-full object-cover"
-                  />
+                {/* Image */}
+                <div className="flex-1">
+                  <img src={doc.img} className="w-full h-full object-cover" />
                 </div>
-                {/* Description 20% */}
-                <div className="h-1/5 bg-white p-2 flex flex-col justify-center text-center">
+                {/* Description */}
+                <div className="bg-white p-3 flex flex-col justify-center text-center">
                   <h3 className="text-sm font-semibold text-black">
                     {doc.name}
                   </h3>
                   <p className="text-[10px] text-[#12ace5]">{doc.degree}</p>
-                  <p className="text-[10px] text-gray-700 mt-1">
-                    {doc.desc}
-                  </p>
+                  <p className="text-[10px] text-gray-700 mt-1">{doc.desc}</p>
                 </div>
               </div>
             </div>
