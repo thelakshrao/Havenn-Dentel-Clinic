@@ -36,7 +36,6 @@ const BookAppointment = () => {
 
   const currentImage = isMobile ? mobileImages[index] : desktopImages[index];
 
-  // **Step 3: EmailJS send function**
   const sendEmail = (e) => {
     e.preventDefault();
     setStatus("Sending...");
@@ -84,7 +83,6 @@ const BookAppointment = () => {
               Book Appointment
             </h2>
 
-            {/* **Step 4: Add ref and onSubmit** */}
             <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
               <div>
                 <label className="text-[#12ace5] font-semibold text-sm">Name</label>
@@ -110,8 +108,6 @@ const BookAppointment = () => {
                 Submit
               </button>
             </form>
-
-            {/* **Step 5: Show status message** */}
             {status && <p className="mt-2 text-center text-sm">{status}</p>}
           </motion.div>
 

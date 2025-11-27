@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import Background from "../images/background5.webp";
-import BackgroundMobile from "../images/background5mobile.webp";
+import Background from "../images/background3.webp";
+import BackgroundMobile from "../images/background3mobile.webp";
 import section2card1 from "../images/appointment2.webp";
 import section2card2 from "../images/section1pic1.webp";
 import section2card3 from "../images/section1pic2.webp";
