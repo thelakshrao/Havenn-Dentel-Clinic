@@ -10,7 +10,6 @@ import TermsandConditions from './components/TermsandConditions';
 import Navbar from './components/Navbar.jsx';
 import MainTreatment from "./components/MainTreatment.jsx";
 
-
 const App = () => {
   return (
     <BrowserRouter>

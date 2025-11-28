@@ -21,6 +21,12 @@ import treatment18 from "../images/treatment18.webp";
 import treatment19 from "../images/treatment19.webp";
 import treatment20 from "../images/treatment20.webp";
 
+const makeSlug = (name) =>
+  name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
 const treatments = [
   { name: "Anti Hair Loss Treatment", img: treatment1, desc: "Advanced therapy to reduce hair fall and strengthen roots." },
   { name: "Hair PRP", img: treatment2, desc: "Platelet-rich plasma treatment for hair regrowth." },
@@ -40,7 +46,7 @@ const treatments = [
   { name: "Dental Implants", img: treatment17, desc: "Permanent tooth replacement implants." },
   { name: "Kids Dentistry", img: treatment18, desc: "Child-friendly dental care and treatments." },
   { name: "Metal / Ceramic Braces", img: treatment19, desc: "Braces for teeth alignment." },
-  { name: "Cosmetic Dentistry", img: treatment20, desc: "Smile design, reshaping, and aesthetic treatments." },
+  { name: "Cosmetic Dentistry", img: treatment20, desc: "Smile design and aesthetic treatments." }
 ];
 
 const Treatments = () => {
@@ -67,15 +73,12 @@ const Treatments = () => {
           {treatments.map((t, i) => (
             <Link
               key={i}
-              to={`/treatment/${t.name.replace(/\s+/g, "-")}`}
+              to={`/treatment/${makeSlug(t.name)}`}
               className="min-w-[180px] md:min-w-[220px] bg-[#fefffe] rounded-xl shadow-md cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl group"
             >
               <img
                 src={t.img}
                 alt={t.name}
-                loading="lazy"
-                decoding="async"
-                fetchPriority="low"
                 className="w-full h-36 object-cover rounded-t-xl"
               />
               <div className="p-3">

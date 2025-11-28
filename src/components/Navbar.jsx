@@ -8,7 +8,7 @@ const treatments = [
   { name: "Hair GFC", slug: "hair-gfc" },
   { name: "Face Mesotherapy", slug: "face-mesotherapy" },
   { name: "Hydra Facial", slug: "hydra-facial" },
-  { name: "Oxygeno Facial", slug: "oxygono-facial" },
+  { name: "Oxygeno Facial", slug: "oxygeno-facial" },
   { name: "Chemical Peels", slug: "chemical-peels" },
   { name: "Acne Control Treatment", slug: "acne-control-treatment" },
   { name: "Acne Scar Treatment", slug: "acne-scar-treatment" },
