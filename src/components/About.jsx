@@ -26,7 +26,7 @@ const About = () => {
       img: doctor1,
       imgMobile: doctor1mobile,
       name: "Dr. Manvi Dixit",
-      title: "Dental Surgeon | Root Canal Specialist | Certified Implantologist, Barcelona, Spain Medical Cosmetologist",
+      title: "Dental Surgeon | Root Canal Specialist | Certified Implantologist, Barcelona, Spain | Medical Cosmetologist",
       desc: "BDS | FCE | FCAM",
     },
     {
