@@ -26,7 +26,8 @@ const About = () => {
       img: doctor1,
       imgMobile: doctor1mobile,
       name: "Dr. Manvi Dixit",
-      title: "Dental Surgeon | Root Canal Specialist | Certified Implantologist, Barcelona, Spain | Medical Cosmetologist",
+      title:
+        "Dental Surgeon | Root Canal Specialist | Certified Implantologist, Barcelona, Spain | Medical Cosmetologist",
       desc: "BDS | FCE | FCAM",
     },
     {
@@ -42,6 +43,13 @@ const About = () => {
       name: "Dr. Subhanshi Mahajan",
       title: "Dental Surgeon",
       desc: "BDS",
+    },
+    {
+      img: doctor3,
+      imgMobile: doctor3mobile,
+      name: "Dr. Lokesh",
+      title: "Orthodontist",
+      desc: "BDS | MDS",
     },
   ];
 
@@ -129,7 +137,7 @@ const About = () => {
       </div>
 
       {/* Meet Our Team */}
-      <div className="max-w-7xl mx-auto px-6 mt-24">
+      <div className="max-w-8xl mx-auto px-6 mt-24">
         <h2
           className="text-4xl font-bold text-center mb-12 text-[#12ace5]"
           style={{ fontFamily: "Caveat, cursive" }}
@@ -137,11 +145,11 @@ const About = () => {
           Meet Our Team
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {doctors.map((doc, index) => (
             <div
               key={index}
-              className="bg-[#fefffe] rounded-xl p-6 pt-14 shadow-xl relative text-center md:text-left"
+              className="bg-[#fefffe] rounded-xl p-6 pt-14 shadow-xl relative text-center h-full flex flex-col"
             >
               <div className="absolute -top-12 left-1/2 md:left-6 transform -translate-x-1/2 md:translate-x-0">
                 <picture>
@@ -157,7 +165,7 @@ const About = () => {
                 </picture>
               </div>
 
-              <div className="mt-10 md:ml-32">
+              <div className="mt-10 flex flex-col items-center text-center">
                 <h3
                   className="text-2xl font-bold text-[#12ace5]"
                   style={{ fontFamily: "Caveat, cursive" }}
@@ -177,9 +185,11 @@ const About = () => {
                   {doc.desc}
                 </p>
 
-                <button className="mt-5 md:mt-16 px-8 py-3 bg-[#12ace5] text-white cursor-pointer font-semibold rounded-full shadow-lg hover:bg-[#d7f5fb] hover:text-black transition z-50">
-                  <Link to="/bookappointment">Book Appointment</Link>
-                </button>
+                <Link to="/bookappointment">
+                  <button className="mt-5 md:mt-16 px-8 py-3 bg-[#12ace5] text-white cursor-pointer font-semibold rounded-full shadow-lg hover:bg-[#d7f5fb] hover:text-black transition z-50 w-full">
+                    Book Appointment
+                  </button>
+                </Link>
               </div>
             </div>
           ))}

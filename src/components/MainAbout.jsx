@@ -54,6 +54,12 @@ const doctors = [
     img: Profile,
     desc: "She is a skilled Dental Surgeon with expertise in modern dental and aesthetic treatments. Known for her precision and patient-centric approach, she ensures safe, comfortable, and personalized care for every patient.",
   },
+  {
+    name: "Dr. Lokesh",
+    degree: "BDS | MDS",
+    img: Profile,
+    desc: "He is an experienced orthodontist who specializes in improving smiles through expert teeth alignment and jaw correction. He is dedicated to providing comfortable, modern, and effective treatment tailored to each patient’s needs, ensuring healthy function and long-lasting results.",
+  },
 ];
 
 const MainAbout = () => {
@@ -213,7 +219,7 @@ const MainAbout = () => {
       {/* Team Section */}
       <section
         ref={teamRef}
-        className={`w-full max-w-6xl mx-auto py-16 px-4 space-y-16 transition-all duration-700 ${
+        className={`w-full max-w-7xl mx-auto py-16 px-4 space-y-16 transition-all duration-700 ${
           teamInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
@@ -224,9 +230,12 @@ const MainAbout = () => {
           Team Behind Our Success
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {doctors.map((doc, index) => (
-            <div key={index} className="flex flex-col">
+            <div
+              key={index}
+              className="flex flex-col w-[260px] md:w-[280px] mx-auto"
+            >
               {/* Desktop Card */}
               <div className="relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer hidden md:block">
                 <img
@@ -235,7 +244,7 @@ const MainAbout = () => {
                   className="w-full h-96 object-cover"
                 />
                 <div className="absolute bottom-4 left-0 w-full text-center z-10">
-                  <h3 className="text-xl font-bold text-white drop-shadow-lg">
+                  <h3 className="text-xl font-bold text-[#12ace5] drop-shadow-lg">
                     {doc.name}
                   </h3>
                 </div>
@@ -266,9 +275,11 @@ const MainAbout = () => {
         </div>
 
         <div className="w-full flex justify-center mt-8">
-          <button className="px-8 py-3 bg-[#12ace5] text-white cursor-pointer font-semibold rounded-full shadow-lg hover:bg-[#d7f5fb] hover:text-black transition z-50">
-            <Link to="/bookappointment">Book Appointment</Link>
-          </button>
+          <Link to="/bookappointment">
+            <button className="px-8 py-3 bg-[#12ace5] text-white cursor-pointer font-semibold rounded-full shadow-lg hover:bg-[#d7f5fb] hover:text-black transition z-50">
+              Book Appointment
+            </button>
+          </Link>
         </div>
       </section>
 
