@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "./Navbar.jsx";
-import Footer from "./Footer.jsx";
+import BookAppointment from "./BookAppointment.jsx";
 
 import treatment1 from "../images/treatment1.webp";
 import treatment2 from "../images/treatment2.webp";
@@ -170,7 +170,7 @@ const MainTreatment = () => {
         </div>
       </section>
 
-      <Footer />
+      <BookAppointment />
     </div>
   );
 };
