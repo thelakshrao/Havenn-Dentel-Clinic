@@ -9,12 +9,13 @@ import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsandConditions from './components/TermsandConditions';
 import Navbar from './components/Navbar.jsx';
 import MainTreatment from "./components/MainTreatment.jsx";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
-
+      <WhatsAppButton />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<MainAbout />} />
