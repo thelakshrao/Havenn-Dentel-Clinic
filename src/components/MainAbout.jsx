@@ -8,6 +8,7 @@ import section2card4 from "../images/section1pic3.webp";
 import Doctors from "../images/doctor1.webp";
 import Profile from "../images/profile.png";
 import Doctors2 from "../images/doctor2.webp";
+import Doctors3 from "../images/doctor3.webp";
 import Review from "./Review.jsx";
 import Footer from "./Footer.jsx";
 import { Link } from "react-router-dom";
@@ -51,7 +52,7 @@ const doctors = [
   {
     name: "Dr. Subhanshi Mahajan",
     degree: "BDS",
-    img: Profile,
+    img: Doctors3,
     desc: "She is a skilled Dental Surgeon with expertise in modern dental and aesthetic treatments. Known for her precision and patient-centric approach, she ensures safe, comfortable, and personalized care for every patient.",
   },
   {

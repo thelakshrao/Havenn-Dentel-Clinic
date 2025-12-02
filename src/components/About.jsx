@@ -1,10 +1,12 @@
 import React from "react";
 import doctor1 from "../images/doctor1.webp";
 import doctor2 from "../images/doctor2.webp";
-import doctor3 from "../images/profile.png";
+import doctor3 from "../images/doctor3.webp";
 import doctor1mobile from "../images/doctor1.webp";
 import doctor2mobile from "../images/doctor2.webp";
-import doctor3mobile from "../images/profile.png";
+import doctor3mobile from "../images/doctor3mobile.webp";
+import doctor4 from "../images/profile.png";
+import doctor4mobile from "../images/profile.png";
 import whyBig from "../images/why.webp";
 import whyMobile from "../images/whymobile.webp";
 import { Link } from "react-router-dom";
@@ -45,8 +47,8 @@ const About = () => {
       desc: "BDS",
     },
     {
-      img: doctor3,
-      imgMobile: doctor3mobile,
+      img: doctor4,
+      imgMobile: doctor4mobile,
       name: "Dr. Lokesh",
       title: "Orthodontist",
       desc: "BDS | MDS",
