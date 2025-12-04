@@ -47,12 +47,12 @@ const TermsAndConditions = () => {
             <li>
               <strong>Website:</strong> refers to Havenn Clinic, accessible from{" "}
               <a
-                href="https://havenn-dentel-clinic.vercel.app"
+                href="https://havennsmile.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-500 hover:underline"
               >
-                https://havennclinic.com/
+                havennclinic.com
               </a>
             </li>
             <li><strong>You:</strong> the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service.</li>
@@ -98,7 +98,7 @@ const TermsAndConditions = () => {
             <li>By email: Havennsmilestudio@gmail.com</li>
             <li>By visiting this page on our website: 
               <a
-                href="https://havenn-dentel-clinic.vercel.app/contactus"
+                href="https://havennsmile.com/contactus"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-500 hover:underline"

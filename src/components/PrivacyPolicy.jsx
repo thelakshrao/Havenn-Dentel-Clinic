@@ -57,12 +57,12 @@ const PrivacyPolicy = () => {
             <li>
               <strong>Website:</strong> refers to Havenn Clinic, accessible from{" "}
               <a
-                href="https://havenn-dentel-clinic.vercel.app/"
+                href="https://havennsmile.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-500 hover:underline"
               >
-                https://havenn-dentel-clinic.vercel.app/
+              havennsmile.com
               </a>
             </li>
             <li><strong>You:</strong> the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service.</li>
@@ -99,7 +99,7 @@ const PrivacyPolicy = () => {
           <p className="text-gray-800 mb-4">If you have any questions about this Privacy Policy, you can contact us:</p>
           <ul className="list-disc list-inside text-gray-800 mb-4">
             <li>By email: Havennsmilestudio@gmail.com</li>
-            <li>By visiting this page on our website: <a href="https://havenn-dentel-clinic.vercel.app/contactus" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Contact Us</a></li>
+            <li>By visiting this page on our website: <a href="https://havennsmile.com/contactus" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Contact Us</a></li>
             <li>By phone number: +91 9315220865</li>
           </ul>
         </div>
