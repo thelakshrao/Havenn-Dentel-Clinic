@@ -220,9 +220,14 @@ const MainAbout = () => {
       {/* Team Section */}
       <section
         ref={teamRef}
-        className={`w-full max-w-7xl mx-auto py-16 px-4 space-y-16 transition-all duration-700 ${
-          teamInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`w-full max-w-7xl mx-auto py-16 px-4 space-y-16 
+    transition-all duration-700
+    ${
+      teamInView
+        ? "opacity-100 md:translate-y-0"
+        : "opacity-100 md:translate-y-10"
+    }
+  `}
       >
         <h2
           style={{ fontFamily: "Caveat, cursive" }}

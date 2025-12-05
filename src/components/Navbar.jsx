@@ -158,8 +158,6 @@ const Navbar = () => {
               </div>
             </div>
           )}
-
-          <a href="#blogs">Blogs</a>
           <Link to="/contactus" onClick={() => setIsOpen(false)}>
             Contact Us
           </Link>
