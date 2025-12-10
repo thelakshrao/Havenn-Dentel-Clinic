@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { FiPhone } from "react-icons/fi";
 import logo from "../images/logo.png";
 
 const treatments = [
@@ -24,6 +25,9 @@ const treatments = [
   { name: "Cosmetic Dentistry", slug: "cosmetic-dentistry" },
 ];
 
+const underline =
+  "relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [mobileTreatOpen, setMobileTreatOpen] = useState(false);
@@ -32,19 +36,16 @@ const Navbar = () => {
 
   const location = useLocation();
 
-  // Navbar scroll effect
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Reset on route change
   useEffect(() => {
     setIsOpen(false);
     setMobileTreatOpen(false);
     setShowTreatment(false);
-    setScrolled(false);
     window.scrollTo(0, 0);
   }, [location]);
 
@@ -62,8 +63,13 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-10 text-white font-medium relative">
-          <Link to="/">Home</Link>
-          <Link to="/about">About Us</Link>
+          <Link to="/" className={underline}>
+            Home
+          </Link>
+
+          <Link to="/about" className={underline}>
+            About Us
+          </Link>
 
           {/* Treatments Dropdown */}
           <div
@@ -71,7 +77,8 @@ const Navbar = () => {
             onMouseEnter={() => setShowTreatment(true)}
             onMouseLeave={() => setShowTreatment(false)}
           >
-            <span className="cursor-pointer">Treatments ↓</span>
+            <span className={`cursor-pointer ${underline}`}>Treatments ↓</span>
+
             <div
               className={`absolute top-10 left-0 w-50 bg-white shadow-lg z-40 overflow-hidden transition-all duration-300 origin-top ${
                 showTreatment
@@ -92,8 +99,21 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <Link to="/contactus">Contact Us</Link>
 
+          <Link to="/contactus" className={underline}>
+            Contact Us
+          </Link>
+
+          {/* Phone */}
+          <a
+            href="tel:09315220865"
+            className="flex items-center gap-2 text-white font-semibold cursor-pointer "
+          >
+            <FiPhone className="text-lg" />
+            <span className="leading-none">093152 20865</span>
+          </a>
+
+          {/* Appointment Button */}
           <Link
             to="/bookappointment"
             className="ml-4 bg-white text-black px-5 py-2 rounded-full shadow-lg font-semibold"
@@ -110,12 +130,7 @@ const Navbar = () => {
           }}
           className="md:hidden text-white"
         >
-          <svg
-            className="w-8 h-8"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -126,22 +141,25 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* MOBILE MENU */}
+      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-[#0a749b]/90 text-white flex flex-col items-center py-4 gap-4 rounded-b-xl shadow-lg">
-          <Link to="/" onClick={() => setIsOpen(false)}>
+
+          <Link to="/" className={underline} onClick={() => setIsOpen(false)}>
             Home
           </Link>
-          <Link to="/about" onClick={() => setIsOpen(false)}>
+
+          <Link to="/about" className={underline} onClick={() => setIsOpen(false)}>
             About Us
           </Link>
-          {/* Mobile Treatments */}
+
           <button
             onClick={() => setMobileTreatOpen(!mobileTreatOpen)}
-            className="font-medium"
+            className={`font-medium ${underline}`}
           >
             Treatments {mobileTreatOpen ? "▲" : "▼"}
           </button>
+
           {mobileTreatOpen && (
             <div className="w-full max-h-80 overflow-y-auto py-4 bg-white text-black rounded-xl shadow-lg">
               <div className="flex flex-col gap-2 px-4">
@@ -158,9 +176,20 @@ const Navbar = () => {
               </div>
             </div>
           )}
-          <Link to="/contactus" onClick={() => setIsOpen(false)}>
+
+          <Link to="/contactus" className={underline} onClick={() => setIsOpen(false)}>
             Contact Us
           </Link>
+
+          {/* Phone */}
+          <a
+            href="tel:09315220865"
+            className={`flex items-center gap-2 text-white font-semibold cursor-pointer ${underline}`}
+          >
+            <FiPhone className="text-lg" />
+            <span className="leading-none">093152 20865</span>
+          </a>
+
           <Link
             to="/bookappointment"
             onClick={() => setIsOpen(false)}
