@@ -28,32 +28,110 @@ const makeSlug = (name) =>
     .replace(/^-+|-+$/g, "");
 
 const treatments = [
-  { name: "Anti Hair Loss Treatment", img: treatment1, desc: "Advanced therapy to reduce hair fall and strengthen roots." },
-  { name: "Hair PRP", img: treatment2, desc: "Platelet-rich plasma treatment for hair regrowth." },
-  { name: "Hair GFC", img: treatment3, desc: "Growth Factor Concentrate therapy for hair restoration." },
-  { name: "Face Mesotherapy", img: treatment4, desc: "Skin rejuvenation with vitamins and hyaluronic acid." },
-  { name: "Hydra Facial", img: treatment5, desc: "Deep cleansing and exfoliation for glowing skin." },
-  { name: "Oxygeno Facial", img: treatment6, desc: "Oxygen infusion treatment for brightening and hydration." },
-  { name: "Chemical Peels", img: treatment7, desc: "Peels for pigmentation, acne, and skin refreshing." },
-  { name: "Acne Control Treatment", img: treatment8, desc: "Targeted acne treatment to reduce breakouts." },
-  { name: "Acne Scar Treatment", img: treatment9, desc: "Scar reduction with advanced dermatology techniques." },
-  { name: "Vampire Facial", img: treatment11, desc: "PRP facial for anti-aging and skin tightening." },
-  { name: "Root Canal Treatment", img: treatment12, desc: "Pain-free RCT to save damaged teeth." },
-  { name: "Painless Tooth Removal", img: treatment13, desc: "Modern tooth extraction with zero discomfort." },
-  { name: "Bleaching", img: treatment14, desc: "Teeth whitening for a brighter smile." },
-  { name: "Crown & Bridge", img: treatment15, desc: "Permanent tooth replacement solutions." },
-  { name: "Clear Aligners", img: treatment16, desc: "Invisible braces for straightening teeth." },
-  { name: "Dental Implants", img: treatment17, desc: "Permanent tooth replacement implants." },
-  { name: "Kids Dentistry", img: treatment18, desc: "Child-friendly dental care and treatments." },
-  { name: "Metal / Ceramic Braces", img: treatment19, desc: "Braces for teeth alignment." },
-  { name: "Cosmetic Dentistry", img: treatment20, desc: "Smile design and aesthetic treatments." }
+  {
+    name: "Anti Hair Loss Treatment",
+    img: treatment1,
+    desc: "Advanced therapy to reduce hair fall and strengthen roots.",
+  },
+  {
+    name: "Hair PRP",
+    img: treatment2,
+    desc: "Platelet-rich plasma treatment for hair regrowth.",
+  },
+  {
+    name: "Hair GFC",
+    img: treatment3,
+    desc: "Growth Factor Concentrate therapy for hair restoration.",
+  },
+  {
+    name: "Face Mesotherapy",
+    img: treatment4,
+    desc: "Skin rejuvenation with vitamins and hyaluronic acid.",
+  },
+  {
+    name: "Hydra Facial",
+    img: treatment5,
+    desc: "Deep cleansing and exfoliation for glowing skin.",
+  },
+  {
+    name: "Oxygeno Facial",
+    img: treatment6,
+    desc: "Oxygen infusion treatment for brightening and hydration.",
+  },
+  {
+    name: "Chemical Peels",
+    img: treatment7,
+    desc: "Peels for pigmentation, acne, and skin refreshing.",
+  },
+  {
+    name: "Acne Control Treatment",
+    img: treatment8,
+    desc: "Targeted acne treatment to reduce breakouts.",
+  },
+  {
+    name: "Acne Scar Treatment",
+    img: treatment9,
+    desc: "Scar reduction with advanced dermatology techniques.",
+  },
+  {
+    name: "Vampire Facial",
+    img: treatment11,
+    desc: "PRP facial for anti-aging and skin tightening.",
+  },
+  {
+    name: "Root Canal Treatment",
+    img: treatment12,
+    desc: "Pain-free RCT to save damaged teeth.",
+  },
+  {
+    name: "Painless Tooth Removal",
+    img: treatment13,
+    desc: "Modern tooth extraction with zero discomfort.",
+  },
+  {
+    name: "Bleaching",
+    img: treatment14,
+    desc: "Teeth whitening for a brighter smile.",
+  },
+  {
+    name: "Crown & Bridge",
+    img: treatment15,
+    desc: "Permanent tooth replacement solutions.",
+  },
+  {
+    name: "Clear Aligners",
+    img: treatment16,
+    desc: "Invisible braces for straightening teeth.",
+  },
+  {
+    name: "Dental Implants",
+    img: treatment17,
+    desc: "Permanent tooth replacement implants.",
+  },
+  {
+    name: "Kids Dentistry",
+    img: treatment18,
+    desc: "Child-friendly dental care and treatments.",
+  },
+  {
+    name: "Metal / Ceramic Braces",
+    img: treatment19,
+    desc: "Braces for teeth alignment.",
+  },
+  {
+    name: "Cosmetic Dentistry",
+    img: treatment20,
+    desc: "Smile design and aesthetic treatments.",
+  },
 ];
 
 const Treatments = () => {
   const sliderRef = useRef(null);
 
-  const scrollLeft = () => sliderRef.current.scrollBy({ left: -300, behavior: "smooth" });
-  const scrollRight = () => sliderRef.current.scrollBy({ left: 300, behavior: "smooth" });
+  const scrollLeft = () =>
+    sliderRef.current.scrollBy({ left: -300, behavior: "smooth" });
+  const scrollRight = () =>
+    sliderRef.current.scrollBy({ left: 300, behavior: "smooth" });
 
   return (
     <section className="w-full bg-white py-16 px-6 md:px-12">
@@ -62,14 +140,10 @@ const Treatments = () => {
       </h2>
 
       <div className="relative max-w-7xl mx-auto">
-        <button
-          onClick={scrollLeft}
-          className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#fefffe] shadow-md rounded-full p-2 z-10 hover:bg-[#12ace5] hover:text-white transition"
+        <div
+          ref={sliderRef}
+          className="flex gap-6 overflow-x-scroll scroll-smooth no-scrollbar py-4"
         >
-          ❮
-        </button>
-
-        <div ref={sliderRef} className="flex gap-6 overflow-x-scroll scroll-smooth no-scrollbar py-4">
           {treatments.map((t, i) => (
             <Link
               key={i}
@@ -92,13 +166,6 @@ const Treatments = () => {
             </Link>
           ))}
         </div>
-
-        <button
-          onClick={scrollRight}
-          className="absolute right-0 top-1/2 -translate-y-1/2 bg-[#fefffe] shadow-md rounded-full p-2 z-10 hover:bg-[#12ace5] hover:text-white transition"
-        >
-          ❯
-        </button>
       </div>
     </section>
   );
