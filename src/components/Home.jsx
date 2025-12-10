@@ -176,9 +176,11 @@ enhancements to help you feel your absolute best every day.`,
             )}
           </div>
 
-          <button className="mt-10 md:mt-16 px-8 py-3 bg-[#12ace5] text-white cursor-pointer font-semibold rounded-full shadow-lg hover:bg-[#d7f5fb] hover:text-black transition z-50">
-            <Link to="/bookappointment">Book Appointment</Link>
-          </button>
+          <Link to="/bookappointment">
+            <button className="mt-5 md:mt-16 px-8 py-3 bg-[#12ace5] text-white cursor-pointer font-semibold rounded-full shadow-lg hover:bg-[#d7f5fb] hover:text-black transition z-50 w-60">
+              Book Appointment
+            </button>
+          </Link>
         </div>
 
         {/* DESKTOP IMAGES */}
