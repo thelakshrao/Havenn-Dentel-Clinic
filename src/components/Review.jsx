@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import BackgroundDesktop from "../images/background3.webp";
 import BackgroundMobile from "../images/background3mobile.webp";
 
-// Manual reviews
 const manualReviews = [
   {
     name: "Nikhat Khan",
@@ -46,14 +45,14 @@ const Reviews = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    // Sort manual reviews by createdAt descending
+
     const sortedReviews = [...manualReviews].sort((a, b) => b.createdAt - a.createdAt);
     setReviews(sortedReviews);
   }, []);
 
   return (
     <section className="w-full min-h-screen relative flex items-center justify-center">
-      {/* Background */}
+
       <div
         className="hidden md:block absolute inset-0"
         style={{
@@ -72,7 +71,6 @@ const Reviews = () => {
       />
       <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
 
-      {/* Reviews Container */}
       <div className="relative w-11/12 max-w-6xl bg-white rounded-2xl shadow-2xl flex flex-col p-6 z-10">
         <h2 className="text-2xl font-bold mb-4">Reviews</h2>
         <div className="flex overflow-x-auto gap-4 pb-4 snap-x snap-mandatory flex-nowrap scroll-smooth">
@@ -88,14 +86,13 @@ const Reviews = () => {
           ))}
         </div>
 
-        {/* Read More Link */}
         <a
           href="https://share.google/3GopvlQh42egz0WQF"
           target="_blank"
           rel="noopener noreferrer"
           className="mt-4 text-[#12ace5] hover:underline self-end"
         >
-          Read more reviews here
+          Read more reviews here →
         </a>
       </div>
     </section>

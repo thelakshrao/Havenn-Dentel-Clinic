@@ -17,7 +17,6 @@ const Appointment = () => {
   const form = useRef();
   const [status, setStatus] = useState("");
 
-  // Detect mobile
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener("resize", handleResize);
@@ -25,7 +24,7 @@ const Appointment = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Slider
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % picturesDesktop.length);
@@ -35,7 +34,6 @@ const Appointment = () => {
 
   const pics = isMobile ? picturesMobile : picturesDesktop;
 
-  // EmailJS function (updated)
   const sendEmail = (e) => {
     e.preventDefault();
     setStatus("Sending...");
@@ -50,19 +48,19 @@ const Appointment = () => {
       .then(
         (result) => {
           console.log(result.text);
-          setStatus("✅ Appointment request sent successfully!");
+          setStatus(" Appointment request sent successfully!");
           form.current.reset();
         },
         (error) => {
           console.log(error.text);
-          setStatus("❌ Failed to send. Please try again later.");
+          setStatus(" Failed to send. Please try again later.");
         }
       );
   };
 
   return (
     <div className="w-full min-h-[500px] md:min-h-[700px] relative flex items-center justify-center overflow-hidden py-6">
-      {/* Background */}
+
       <div className="absolute inset-0 bg-cover bg-center">
         <picture>
           <source media="(max-width: 768px)" srcSet={background2mobile} />
@@ -77,13 +75,12 @@ const Appointment = () => {
       </div>
       <div className="absolute inset-0 bg-[#000000]/30"></div>
 
-      {/* Card */}
       <div
         className={`relative z-10 flex flex-col ${
           isMobile ? "w-11/12" : "w-4/5 md:flex-row"
         } bg-transparent rounded-3xl shadow-xl overflow-hidden`}
       >
-        {/* Image Slider */}
+
         <div
           className={`${
             isMobile ? "w-full h-48" : "w-2/5 h-64 md:h-auto"
@@ -101,7 +98,6 @@ const Appointment = () => {
           ))}
         </div>
 
-        {/* Form */}
         <div
           className={`${
             isMobile ? "w-full p-4" : "w-3/5 p-6 md:p-8"
@@ -113,7 +109,7 @@ const Appointment = () => {
             }`}
             style={{ fontFamily: "Caveat, cursive" }}
           >
-            Book an Appointment
+            Book an Appointment →
           </h2>
 
           <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-3">

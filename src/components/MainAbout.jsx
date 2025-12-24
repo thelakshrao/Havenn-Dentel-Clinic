@@ -102,7 +102,6 @@ const MainAbout = () => {
 
   return (
     <>
-      {/* Hero Section */}
       <section
         ref={heroRef}
         className={`w-full transition-all duration-700 ${
@@ -165,8 +164,6 @@ const MainAbout = () => {
           </div>
         )}
       </section>
-
-      {/* Cards Section */}
       <section className="w-full py-16 flex flex-col items-center bg-[#d7f5fb]">
         <h2
           style={{ fontFamily: "Caveat, cursive" }}
@@ -216,8 +213,6 @@ const MainAbout = () => {
           ))}
         </div>
       </section>
-
-      {/* Team Section */}
       <section
         ref={teamRef}
         className={`w-full max-w-7xl mx-auto py-16 px-4 space-y-16 
@@ -242,7 +237,6 @@ const MainAbout = () => {
               key={index}
               className="flex flex-col w-[260px] md:w-[280px] mx-auto"
             >
-              {/* Desktop Card */}
               <div className="relative overflow-hidden rounded-2xl shadow-lg group cursor-pointer hidden md:block">
                 <img
                   src={doc.img}
@@ -260,14 +254,10 @@ const MainAbout = () => {
                   <p className="text-sm">{doc.desc}</p>
                 </div>
               </div>
-
-              {/* Mobile Card */}
               <div className="flex flex-col md:hidden overflow-hidden rounded-2xl shadow-lg">
-                {/* Image */}
                 <div className="flex-1">
                   <img src={doc.img} className="w-full h-full object-cover" />
                 </div>
-                {/* Description */}
                 <div className="bg-white p-3 flex flex-col justify-center text-center">
                   <h3 className="text-sm font-semibold text-black">
                     {doc.name}
@@ -283,7 +273,7 @@ const MainAbout = () => {
         <div className="w-full flex justify-center mt-8">
           <Link to="/bookappointment">
             <button className="px-8 py-3 bg-[#12ace5] text-white cursor-pointer font-semibold rounded-full shadow-lg hover:bg-[#d7f5fb] hover:text-black transition z-50">
-              Book Appointment
+              Book Appointment →
             </button>
           </Link>
         </div>

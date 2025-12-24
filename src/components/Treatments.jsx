@@ -136,7 +136,7 @@ const Treatments = () => {
   return (
     <section className="w-full bg-white py-16 px-6 md:px-12">
       <h2 className="text-[#12ace5] text-3xl md:text-4xl font-bold text-center mb-10 font-caveat">
-        Treatments We Provide
+        Treatments We Offer
       </h2>
 
       <div className="relative max-w-7xl mx-auto">

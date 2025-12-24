@@ -49,11 +49,10 @@ const Services = () => {
   return (
     <section className="w-full bg-[#d7f5fb] py-16 px-6 md:px-12">
       <h2 className="text-[#12ace5] text-3xl md:text-4xl font-bold mb-10 text-center font-caveat">
-        Welcome to Havenn
+        Welcome to Havenn Studio
       </h2>
 
       <div className="max-w-5xl mx-auto bg-[#fefffe] rounded-3xl shadow-lg flex flex-col md:flex-row overflow-hidden">
-        {/* Image Carousel */}
         <div className="md:w-2/3 w-full h-64 md:h-96 overflow-hidden relative">
           <div
             className="flex transition-transform duration-1000 ease-in-out"
@@ -72,14 +71,12 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Text */}
         <div className="md:w-1/3 w-full p-6 flex flex-col justify-center">
           <h3 className="text-2xl font-bold text-[#12ace5] mb-4 font-caveat">
             {services[current].title}
           </h3>
           <p className="text-gray-800 font-sans">{services[current].desc}</p>
 
-          {/* Pagination Dots */}
           <div className="flex gap-2 mt-6 justify-center md:justify-start">
             {services.map((_, i) => (
               <button

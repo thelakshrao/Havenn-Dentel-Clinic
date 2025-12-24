@@ -104,10 +104,8 @@ enhancements to help you feel your absolute best every day.`,
           </picture>
         </div>
 
-        {/* DARKER OVERLAY */}
         <div className="absolute inset-0 bg-black/60"></div>
 
-        {/* TEXT BLOCK */}
         <div
           className={`
             absolute z-40 transition-all duration-1000
@@ -120,7 +118,6 @@ enhancements to help you feel your absolute best every day.`,
             md:left-40 md:top-65 md:text-left md:translate-x-0
           `}
         >
-          {/* Animated Changing Text */}
           <div
             className={`
               transition-all duration-700
@@ -178,12 +175,11 @@ enhancements to help you feel your absolute best every day.`,
 
           <Link to="/bookappointment">
             <button className="mt-5 md:mt-16 px-8 py-3 bg-[#12ace5] text-white cursor-pointer font-semibold rounded-full shadow-lg hover:bg-[#d7f5fb] hover:text-black transition z-50 w-60">
-              Book Appointment
+              Book Appointment →
             </button>
           </Link>
         </div>
 
-        {/* DESKTOP IMAGES */}
         <div className="hidden md:block">
           {order.map((idx, i) => (
             <div
@@ -212,7 +208,6 @@ enhancements to help you feel your absolute best every day.`,
           ))}
         </div>
 
-        {/* MOBILE IMAGES */}
         <div className="md:hidden flex justify-center gap-3 mt-108 mb-10 z-30 relative">
           {picturesDesktop.map((pic, idx) => (
             <picture key={idx}>

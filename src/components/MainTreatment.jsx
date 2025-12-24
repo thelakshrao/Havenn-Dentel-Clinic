@@ -1,4 +1,3 @@
-// MainTreatment.jsx
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "./Navbar.jsx";
@@ -32,7 +31,7 @@ const makeSlug = (name) =>
     .replace(/^-+|-+$/g, "");
 
 const treatments = [
-  // 1. Anti Hair Loss Treatment
+
   {
     name: "Anti Hair Loss Treatment",
     img: treatment1,
@@ -70,7 +69,6 @@ const treatments = [
     ],
   },
 
-  // 2. Hair PRP
   {
     name: "Hair PRP",
     img: treatment2,
@@ -108,7 +106,6 @@ const treatments = [
     ],
   },
 
-  // 3. Hair GFC
   {
     name: "Hair GFC",
     img: treatment3,
@@ -146,7 +143,6 @@ const treatments = [
     ],
   },
 
-  // 4. Face Mesotherapy
   {
     name: "Face Mesotherapy",
     img: treatment4,
@@ -184,7 +180,6 @@ const treatments = [
     ],
   },
 
-  // 5. Hydra Facial (already provided by you, kept as is)
   {
     name: "Hydra Facial",
     img: treatment5,
@@ -226,7 +221,6 @@ const treatments = [
     ],
   },
 
-  // 6. Oxygeno Facial
   {
     name: "Oxygeno Facial",
     img: treatment6,
@@ -264,7 +258,6 @@ const treatments = [
     ],
   },
 
-  // 7. Chemical Peels
   {
     name: "Chemical Peels",
     img: treatment7,
@@ -302,7 +295,6 @@ const treatments = [
     ],
   },
 
-  // 8. Acne Control Treatment
   {
     name: "Acne Control Treatment",
     img: treatment8,
@@ -340,7 +332,6 @@ const treatments = [
     ],
   },
 
-  // 9. Acne Scar Treatment
   {
     name: "Acne Scar Treatment",
     img: treatment9,
@@ -378,7 +369,6 @@ const treatments = [
     ],
   },
 
-  // 10. Vampire Facial
   {
     name: "Vampire Facial",
     img: treatment11,
@@ -416,7 +406,6 @@ const treatments = [
     ],
   },
 
-  // 11. Root Canal Treatment
   {
     name: "Root Canal Treatment",
     img: treatment12,
@@ -454,7 +443,6 @@ const treatments = [
     ],
   },
 
-  // 12. Painless Tooth Removal
   {
     name: "Painless Tooth Removal",
     img: treatment13,
@@ -492,7 +480,6 @@ const treatments = [
     ],
   },
 
-  // 13. Bleaching
   {
     name: "Bleaching",
     img: treatment14,
@@ -530,7 +517,6 @@ const treatments = [
     ],
   },
 
-  // 14. Crown & Bridge
   {
     name: "Crown & Bridge",
     img: treatment15,
@@ -568,7 +554,6 @@ const treatments = [
     ],
   },
 
-  // 15. Clear Aligners
   {
     name: "Clear Aligners",
     img: treatment16,
@@ -606,7 +591,6 @@ const treatments = [
     ],
   },
 
-  // 16. Dental Implants
   {
     name: "Dental Implants",
     img: treatment17,
@@ -644,7 +628,6 @@ const treatments = [
     ],
   },
 
-  // 17. Kids Dentistry
   {
     name: "Kids Dentistry",
     img: treatment18,
@@ -682,7 +665,6 @@ const treatments = [
     ],
   },
 
-  // 18. Metal / Ceramic Braces
   {
     name: "Metal / Ceramic Braces",
     img: treatment19,
@@ -720,7 +702,6 @@ const treatments = [
     ],
   },
 
-  // 19. Cosmetic Dentistry
   {
     name: "Cosmetic Dentistry",
     img: treatment20,
@@ -775,14 +756,12 @@ const MainTreatment = () => {
     );
   }
 
-  // Fallback helpers
   const slogan = treatment.slogan || "";
   const overview = treatment.overview || treatment.desc || "";
   const duration = treatment.duration || "Varies by case";
   const recovery = treatment.recovery || "Consult for details";
   const safety = treatment.safety || "Safe when performed by professionals";
   const benefits = treatment.benefits || [
-    // split desc into bullets if no explicit benefits
     ...(treatment.desc ? [treatment.desc] : []),
   ];
   const procedure = treatment.procedure || [
@@ -812,7 +791,6 @@ const MainTreatment = () => {
     <>
       <Navbar />
       <div className="min-h-screen flex flex-col">
-        {/* Top heading strip / hero */}
         <header className="w-full bg-gradient-r from-white to-white/80">
           <div className="max-w-6xl mx-auto mt-15 px-4 py-6">
             <div className="bg-[#f0fbff] rounded-md p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -828,7 +806,6 @@ const MainTreatment = () => {
                 )}
               </div>
               <div className="text-sm text-gray-700">
-                {/* small meta area — you could display breadcrumbs or short CTA */}
                 <span className="hidden md:inline">
                   Expert care • Trusted clinic
                 </span>
@@ -837,7 +814,6 @@ const MainTreatment = () => {
           </div>
         </header>
 
-        {/* Overview + image + side info */}
         <section className="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="md:col-span-2 space-y-4">
             <h2 className="text-xl font-semibold text-[#12ace5]">Overview</h2>
@@ -884,14 +860,12 @@ const MainTreatment = () => {
                   }}
                   className="w-full inline-block text-white bg-[#12ace5] hover:bg-[#0a749b] transition px-4 py-2 rounded-full font-medium"
                 >
-                  Book Appointment
+                  Book Appointment →
                 </button>
               </div>
             </div>
           </aside>
         </section>
-
-        {/* Benefits */}
         <section className="bg-white py-8">
           <div className="max-w-6xl mx-auto px-4">
             <h3 className="text-2xl font-semibold text-[#12ace5] mb-6">
@@ -923,8 +897,6 @@ const MainTreatment = () => {
             </div>
           </div>
         </section>
-
-        {/* Procedure */}
         <section className="max-w-6xl mx-auto px-4 py-12">
           <h3 className="text-2xl font-semibold text-[#12ace5] mb-6">
             Procedure
@@ -950,7 +922,6 @@ const MainTreatment = () => {
           </div>
         </section>
 
-        {/* FAQ */}
         <section className="bg-gray-50 py-10">
           <div className="max-w-6xl mx-auto px-4">
             <h3 className="text-2xl font-semibold text-[#12ace5] mb-6">
@@ -983,8 +954,6 @@ const MainTreatment = () => {
             </div>
           </div>
         </section>
-
-        {/* Book Appointment (anchor id for scroll) */}
         <div id="book-appointment" className="pt-12">
           <BookAppointment />
         </div>

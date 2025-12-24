@@ -185,7 +185,7 @@ const About = () => {
 
                 <Link to="/bookappointment">
                   <button className="mt-5 md:mt-16 px-8 py-3 bg-[#12ace5] text-white cursor-pointer font-semibold rounded-full shadow-lg hover:bg-[#d7f5fb] hover:text-black transition z-50 w-full">
-                    Book Appointment 📆
+                    Book Appointment →
                   </button>
                 </Link>
               </div>

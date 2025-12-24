@@ -19,7 +19,7 @@ const BookAppointment = () => {
   const [index, setIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const form = useRef();
-  const [status, setStatus] = useState(""); // For success/error message
+  const [status, setStatus] = useState(""); 
 
   useEffect(() => {
     const resize = () => setIsMobile(window.innerWidth < 768);
@@ -50,12 +50,12 @@ const BookAppointment = () => {
       .then(
         (result) => {
           console.log(result.text);
-          setStatus("✅ Appointment request sent successfully!");
+          setStatus("Appointment request sent successfully!");
           form.current.reset(); 
         },
         (error) => {
           console.log(error.text);
-          setStatus("❌ Failed to send. Please try again later.");
+          setStatus(" Failed to send. Please try again later.");
         }
       );
   };
@@ -63,16 +63,13 @@ const BookAppointment = () => {
   return (
     <>
       <section className="relative w-full h-[110vh] md:h-screen overflow-hidden">
-        {/* Background */}
         <div
           className="absolute inset-0 bg-cover bg-center transition-opacity duration-700 ease-in-out"
           style={{ backgroundImage: `url(${currentImage})`, filter: "blur(3px)" }}
         ></div>
         <div className="absolute inset-0 bg-black/30"></div>
 
-        {/* MAIN CONTENT */}
         <div className={`absolute inset-0 flex ${isMobile ? "flex-col" : "flex-row"} items-center justify-center gap-6 px-4 mt-15 md:px-12`}>
-          {/* LEFT – APPOINTMENT CARD */}
           <motion.div
             initial={{ y: 80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -80,7 +77,7 @@ const BookAppointment = () => {
             className={`${isMobile ? "w-[90%] p-4 rounded-2xl" : "max-w-md w-full p-8 rounded-3xl"} bg-white/90 backdrop-blur-xl shadow-xl`}
           >
             <h2 className={`text-[#12ace5] font-bold text-center ${isMobile ? "text-xl mb-3" : "text-3xl md:text-4xl mb-6"}`}>
-              Book Appointment
+              Book Appointment →
             </h2>
 
             <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-4">
@@ -111,7 +108,6 @@ const BookAppointment = () => {
             {status && <p className="mt-2 text-center text-sm">{status}</p>}
           </motion.div>
 
-          {/* RIGHT – TEXT + PHONE */}
           <motion.div
             initial={{ y: 80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

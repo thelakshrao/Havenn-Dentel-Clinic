@@ -100,7 +100,7 @@ const PrivacyPolicy = () => {
           <ul className="list-disc list-inside text-gray-800 mb-4">
             <li>By email: Havennsmilestudio@gmail.com</li>
             <li>By visiting this page on our website: <a href="https://havennsmile.com/contactus" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Contact Us</a></li>
-            <li>By phone number: +91 9315220865</li>
+            <li>By phone number: +91 9315220865 📞</li>
           </ul>
         </div>
       </div>

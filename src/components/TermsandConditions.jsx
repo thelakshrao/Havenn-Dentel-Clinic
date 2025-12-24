@@ -106,7 +106,7 @@ const TermsAndConditions = () => {
                 Contact Us
               </a>
             </li>
-            <li>By phone number: +91 9315220865</li>
+            <li>By phone number: +91 9315220865 📞</li>
           </ul>
         </div>
       </div>

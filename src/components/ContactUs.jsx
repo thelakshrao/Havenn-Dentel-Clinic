@@ -22,7 +22,7 @@ const ContactUs = () => {
   const cards = [
     {
       title: "Call Us",
-      text: "Reach our dental clinic via phone.\nBook your appointments easily.\nOur staff is available Mon-Sat, 9AM-6PM.",
+      text: "Reach our dental clinic via phone.\nBook your appointments easily.\nOur staff is available Mon-Sat, 9AM-9PM.",
       image: cardImg1,
     },
     {
@@ -39,7 +39,6 @@ const ContactUs = () => {
 
   const backgroundTop = isMobile ? Background3Mobile : Background3;
 
-  // Mobile slider effect
   useEffect(() => {
     if (isMobile) {
       const interval = setInterval(() => {
@@ -53,7 +52,6 @@ const ContactUs = () => {
     <>
     <Navbar/>
     <div className="w-full">
-      {/* Section 1 */}
       <div
         className={`w-full ${isMobile ? "h-110" : "h-[550px]"} flex flex-col items-center justify-center relative`}
         style={{
@@ -62,7 +60,6 @@ const ContactUs = () => {
           backgroundPosition: "center",
         }}
       >
-        {/* Desktop: 3 static cards */}
         {!isMobile && (
           <div className="flex flex-row gap-10 items-center justify-center p-4 mt-18">
             {cards.map((card, index) => (
@@ -83,8 +80,6 @@ const ContactUs = () => {
             ))}
           </div>
         )}
-
-        {/* Mobile: single card slider */}
         {isMobile && (
           <div className="relative top-8 w-full h-full flex items-center justify-center overflow-hidden">
             {cards.map((card, index) => (

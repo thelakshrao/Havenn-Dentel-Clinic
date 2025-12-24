@@ -6,7 +6,6 @@ const Footer = () => {
   return (
     <footer className="bg-[#0a749b]/90 text-white pt-12 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between gap-8">
-        {/* Logo & Tagline */}
         <div className="flex flex-col gap-4 md:w-1/3">
           <div className="flex items-center gap-1">
             <img src={logo} alt="Logo" className="w-56 h-30 object-contain" />
@@ -50,7 +49,6 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        {/* Terms */}
         <div className="flex flex-col gap-4 md:w-1/5">
           <h2
             style={{ fontFamily: "Caveat, cursive" }}
@@ -70,7 +68,6 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        {/* Contact Info */}
         <div className="flex flex-col gap-4 md:w-1/4">
           <h2
             style={{ fontFamily: "Caveat, cursive" }}
@@ -89,12 +86,11 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div
         style={{ fontFamily: "Open Sans, sans-serif" }}
         className="mt-12 border-t border-gray-600 pt-4 text-center text-gray-400 text-sm"
       >
-        &copy; 2025 Havenn, Skin, and a Smile, Aesthetic Studio (Medical Treatment)
+        &copy; 2025 HavennSmile & Aesthetic Studio (Medical Treatment)
       </div>
     </footer>
   );
