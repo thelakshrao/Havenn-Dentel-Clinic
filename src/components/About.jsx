@@ -64,8 +64,6 @@ const About = () => {
         >
           Why Patients Love Us
         </h2>
-
-        {/* Desktop version (hidden on mobile) */}
         <div className="max-w-6xl mx-auto bg-[#fefffe] rounded-3xl shadow-lg flex-col md:flex-row overflow-hidden hidden md:flex">
           <div className="md:w-1/2 w-full p-10 flex flex-col justify-center gap-4">
             {steps.map((step, index) => (
@@ -101,7 +99,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Mobile-only version */}
         <div className="flex flex-col gap-4 md:hidden bg-[#fefffe] rounded-2xl shadow-md p-4">
           <div className="flex flex-col gap-2">
             {steps.map((step, index) => (
@@ -138,7 +135,6 @@ const About = () => {
         </div>
       </div>
 
-      {/* Meet Our Team */}
       <div className="max-w-8xl mx-auto px-6 mt-24">
         <h2
           className="text-4xl font-bold text-center mb-12 text-[#12ace5]"
@@ -189,7 +185,7 @@ const About = () => {
 
                 <Link to="/bookappointment">
                   <button className="mt-5 md:mt-16 px-8 py-3 bg-[#12ace5] text-white cursor-pointer font-semibold rounded-full shadow-lg hover:bg-[#d7f5fb] hover:text-black transition z-50 w-full">
-                    Book Appointment
+                    Book Appointment 📆
                   </button>
                 </Link>
               </div>
