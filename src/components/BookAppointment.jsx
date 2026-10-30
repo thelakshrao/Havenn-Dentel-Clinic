@@ -117,7 +117,7 @@ const BookAppointment = () => {
             <h1 className={`font-bold drop-shadow-lg ${isMobile ? "text-2xl mb-2" : "text-4xl md:text-5xl mb-4"}`}>Your Smile, Our Priority</h1>
             <h3 className={`font-semibold text-blue-200 ${isMobile ? "text-base mb-2" : "text-xl md:text-2xl mb-3"}`}>Premium Dental Care in New Delhi</h3>
             <p className={`drop-shadow-md ${isMobile ? "text-sm leading-snug" : "text-lg leading-relaxed"}`}>
-              At Havenn Smile & Aesthetic Studio, we deliver painless and advanced dental treatments. From whitening to smile designing — our expert team ensures you get the perfect smile you deserve.
+              At Haven Smile & Aesthetic Studio, we deliver painless and advanced dental treatments. From whitening to smile designing — our expert team ensures you get the perfect smile you deserve.
             </p>
             <div className="mt-3">
               <a href="tel:+919876543210" className={`inline-block bg-[#12ace5] text-white font-semibold rounded-xl shadow-lg ${isMobile ? "text-xs px-3 py-1.5 w-full" : "text-lg px-6 py-3"} text-center`}>

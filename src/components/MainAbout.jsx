@@ -119,7 +119,7 @@ const MainAbout = () => {
                 style={{ fontFamily: "Caveat, cursive" }}
                 className="text-xl font-bold text-[#12ace5] mb-2"
               >
-                Havenn Dental & Wellness Clinic
+                Haven Dental & Wellness Clinic
               </h1>
               <p className="text-black font-semibold mb-1 text-sm">
                 Skin • Hair • Dental • Laser • Anti-Ageing
@@ -146,7 +146,7 @@ const MainAbout = () => {
                 style={{ fontFamily: "Caveat, cursive" }}
                 className="text-3xl md:text-5xl font-bold text-[#12ace5] mb-4"
               >
-                Havenn Dental & Wellness Clinic
+                Haven Dental & Wellness Clinic
               </h1>
               <p className="text-black font-semibold mb-4 text-lg">
                 Skin • Hair • Dental • Laser • Anti-Ageing
@@ -169,7 +169,7 @@ const MainAbout = () => {
           style={{ fontFamily: "Caveat, cursive" }}
           className="text-3xl md:text-5xl font-bold text-[#12ace5] text-center"
         >
-          Step Inside Havenn
+          Step Inside Haven
         </h2>
 
         <div

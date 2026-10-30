@@ -11,7 +11,7 @@ const manualReviews = [
   },
   {
     name: "Pawan Diwania",
-    text: "I recently had a Root Canal Treatment (RCT) at Havenn Smile And Aesthetic Studio and the experience was excellent. The doctor is highly knowledgeable and made the whole process smooth and almost painless. What I really liked is that they only charge for what’s necessary—no extra or unnecessary treatments. Everything felt honest and professional. Definitely a place you can trust for quality dental care.",
+    text: "I recently had a Root Canal Treatment (RCT) at Haven Smile And Aesthetic Studio and the experience was excellent. The doctor is highly knowledgeable and made the whole process smooth and almost painless. What I really liked is that they only charge for what’s necessary—no extra or unnecessary treatments. Everything felt honest and professional. Definitely a place you can trust for quality dental care.",
     rating: 5,
     createdAt: new Date("2025-01-02"),
   },
@@ -29,7 +29,7 @@ const manualReviews = [
   },
   {
     name: "Abhimanyu Singh",
-    text: "I recently had a Root Canal Treatment (RCT) at Havenn Smile And Aesthetic Studio and the experience was excellent. The doctor is highly knowledgeable and made the whole process smooth and almost painless.",
+    text: "I recently had a Root Canal Treatment (RCT) at Haven Smile And Aesthetic Studio and the experience was excellent. The doctor is highly knowledgeable and made the whole process smooth and almost painless.",
     rating: 5,
     createdAt: new Date("2025-01-05"),
   },

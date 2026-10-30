@@ -34,14 +34,14 @@ const Home = () => {
     {
       type: "heading",
       title: "Comprehensive Care for Your Smile, Skin, and Hair",
-      bigTitle: "Havenn",
+      bigTitle: "Haven",
       treatments: "Skin | Hair | Dental | Wellness",
       subtitle: "Advanced solutions for a confident you.",
     },
     {
       type: "paragraph",
       logo: true,
-      text: `At Havenn Smile & Aesthetic Studio, we bring together
+      text: `At Haven Smile & Aesthetic Studio, we bring together
 advanced technology, artistic precision, and compassionate care.
 Our team ensures tailored treatments that enhance your natural
 beauty and restore confidence. From dentistry to skin, hair and

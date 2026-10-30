@@ -90,7 +90,7 @@ const Footer = () => {
         style={{ fontFamily: "Open Sans, sans-serif" }}
         className="mt-12 border-t border-gray-600 pt-4 text-center text-gray-400 text-sm"
       >
-        &copy; 2025 HavennSmile & Aesthetic Studio (Medical Treatment)
+        &copy; 2025 HavenSmile & Aesthetic Studio (Medical Treatment)
       </div>
     </footer>
   );

@@ -39,20 +39,20 @@ const TermsAndConditions = () => {
           <ul className="list-disc list-inside text-gray-800 mb-4">
             <li><strong>Affiliate:</strong> an entity that controls, is controlled by or is under common control with a party.</li>
             <li><strong>Country:</strong> refers to: Delhi, India</li>
-            <li><strong>Company:</strong> (referred to as “the Company”, “We”, “Us” or “Our”) refers to Havenn Clinic.</li>
+            <li><strong>Company:</strong> (referred to as “the Company”, “We”, “Us” or “Our”) refers to Haven Clinic.</li>
             <li><strong>Device:</strong> any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>
             <li><strong>Service:</strong> refers to the Website.</li>
             <li><strong>Terms and Conditions:</strong> (also referred as “Terms”) form the entire agreement between You and the Company regarding the use of the Service.</li>
             <li><strong>Third-party Social Media Service:</strong> any services or content provided by a third-party that may be displayed, included or made available by the Service.</li>
             <li>
-              <strong>Website:</strong> refers to Havenn Clinic, accessible from{" "}
+              <strong>Website:</strong> refers to Haven Clinic, accessible from{" "}
               <a
-                href="https://havennsmile.com"
+                href="https://havensmile.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-500 hover:underline"
               >
-                havennclinic.com
+                havensmile.com
               </a>
             </li>
             <li><strong>You:</strong> the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service.</li>
@@ -98,7 +98,7 @@ const TermsAndConditions = () => {
             <li>By email: Havennsmilestudio@gmail.com</li>
             <li>By visiting this page on our website: 
               <a
-                href="https://havennsmile.com/contactus"
+                href="https://havensmile.com/contactus"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-500 hover:underline"

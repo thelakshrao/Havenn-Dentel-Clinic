@@ -49,7 +49,7 @@ const Services = () => {
   return (
     <section className="w-full bg-[#d7f5fb] py-16 px-6 md:px-12">
       <h2 className="text-[#12ace5] text-3xl md:text-4xl font-bold mb-10 text-center font-caveat">
-        Welcome to Havenn Studio
+        Welcome to Haven Studio
       </h2>
 
       <div className="max-w-5xl mx-auto bg-[#fefffe] rounded-3xl shadow-lg flex flex-col md:flex-row overflow-hidden">
